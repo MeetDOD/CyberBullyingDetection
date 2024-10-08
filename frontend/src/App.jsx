@@ -17,7 +17,7 @@ function App() {
     }
 
     setloading(true);
-    const response = await fetch('https://cyberbullyingdetectionbackend.onrender.com/predict', {
+    const response = await fetch('https://backendcyberbullyingdetection.onrender.com/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
