@@ -46,7 +46,7 @@ function App() {
               Together, we can detect and prevent cyber bullying.
             </p>
           </div>
-          <form onClick={handleSubmit} className="lg:w-1/2 md:w-2/3 mx-auto">
+          <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-full">
                 <div className="relative">
@@ -59,7 +59,7 @@ function App() {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-cyan-500 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded-lg text-lg">
+                <button onClick={handleSubmit} className="flex mx-auto text-white bg-cyan-500 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-600 rounded-lg text-lg">
                   {loading ?
                     <div className='flex gap-2 items-center'>
                       <ImSpinner2 size={20} className='animate-spin' /> Analyzing...
@@ -69,7 +69,7 @@ function App() {
               </div>
               {result && <p>{result}</p>}
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </div>
