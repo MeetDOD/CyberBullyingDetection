@@ -10,7 +10,7 @@ with open('tokenizer.pkl', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://cyberbullyingdetection-2u82.onrender.com"}})
+CORS(app, resources={r"/*": {"origins": "https://cyberbullyingdetectiondsl.onrender.com"}})
 
 max_len = 100
 
