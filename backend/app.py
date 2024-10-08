@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
+from flask_cors import CORS
 
 model = load_model('cyberbullying_model.h5')
 
@@ -9,6 +10,7 @@ with open('tokenizer.pkl', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "https://cyberbullyingdetection-2u82.onrender.com"}})
 
 max_len = 100
 
