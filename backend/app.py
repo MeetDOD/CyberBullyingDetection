@@ -14,9 +14,9 @@ CORS(app)
 
 max_len = 100
 
-@app.route('/',methods=['GET'])
-def hello():
-    return 'Hello, Meet Dodiya !'
+@app.route('/')
+def index():
+    return "About This is simple cyber bullying detection application which is made using python flask and reactjs. This webapp take input from user and analyze it and tell wheather the given description is cyber bullying ot not !"
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -31,5 +31,5 @@ def predict():
 
     return jsonify({'label': label})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':  
+   app.run()
