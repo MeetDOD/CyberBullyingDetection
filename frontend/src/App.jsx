@@ -17,7 +17,7 @@ function App() {
     }
 
     setloading(true);
-    const response = await fetch('https://backendcyberbullyingdetection.onrender.com/predict', {
+    const response = await fetch('http://127.0.0.1:5000/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,12 @@ function App() {
                     : 'Analyze'}
                 </button>
               </div>
-              {result && <p>{result}</p>}
+              <div className='text-center flex items-center'>
+                {result &&
+                  <div className='font-bold text-3xl text-cyan-500'>
+                    {result} !
+                  </div>}
+              </div>
             </div>
           </div>
         </div>
